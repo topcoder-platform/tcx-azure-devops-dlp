@@ -1,0 +1,67 @@
+{
+  "subscriptionId": "bf5c1cdc-746f-4ba4-ad42-d936b8b89896",
+  "notificationId": 2,
+  "id": "71440cbd-6f2a-454a-9e1e-f7330091f4c4",
+  "eventType": "workitem.deleted",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Epic #40 (Sample Epic Title - Edited) deleted by Dhruvit Raithatha",
+    "html": "Epic #40 (Sample Epic Title - Edited) deleted by Dhruvit Raithatha",
+    "markdown": "Epic #40 (Sample Epic Title - Edited) deleted by Dhruvit Raithatha"
+  },
+  "detailedMessage": {
+    "text": "Epic #40 (Sample Epic Title - Edited) deleted by Dhruvit Raithatha\r\n\r\n- Area: TCXTest\r\n- Iteration: TCXTest\\Sprint 1\r\n- State: New\r\n",
+    "html": "Epic #40 (Sample Epic Title - Edited) deleted by Dhruvit Raithatha<ul>\r\n<li>Area: TCXTest</li>\r\n<li>Iteration: TCXTest\\Sprint 1</li>\r\n<li>State: New</li></ul>",
+    "markdown": "Epic #40 (Sample Epic Title - Edited) deleted by Dhruvit Raithatha\r\n\r\n* Area: TCXTest\r\n* Iteration: TCXTest\\Sprint 1\r\n* State: New\r\n"
+  },
+  "resource": {
+    "id": 40,
+    "rev": 3,
+    "fields": {
+      "System.AreaPath": "TCXTest",
+      "System.TeamProject": "TCXTest",
+      "System.IterationPath": "TCXTest\\Sprint 1",
+      "System.WorkItemType": "Epic",
+      "System.State": "New",
+      "System.Reason": "New",
+      "System.CreatedDate": "2020-12-07T18:52:00.543Z",
+      "System.CreatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.ChangedDate": "2020-12-07T18:53:33.79Z",
+      "System.ChangedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CommentCount": 0,
+      "System.Title": "Sample Epic Title - Edited",
+      "Microsoft.VSTS.Common.StateChangeDate": "2020-12-07T18:52:00.543Z",
+      "Microsoft.VSTS.Common.Priority": 2,
+      "Microsoft.VSTS.Common.ValueArea": "Business",
+      "System.Description": "<div>Sample Epic Description - Edited<br></div>"
+    },
+    "_links": {
+      "self": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/recyclebin/40"
+      },
+      "workItemType": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItemTypes/Epic"
+      },
+      "fields": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/fields"
+      }
+    },
+    "url": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/recyclebin/40"
+  },
+  "resourceVersion": "1.0",
+  "resourceContainers": {
+    "collection": {
+      "id": "fa5c7c57-df2b-4074-af83-a4296d629c6e",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "account": {
+      "id": "2efc7de2-f7f8-463c-bb87-4f1ac17db7ce",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "project": {
+      "id": "dc2d3852-e28c-4bc3-aa3c-a7a457456730",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    }
+  },
+  "createdDate": "2020-12-07T18:53:40.7289733Z"
+}
