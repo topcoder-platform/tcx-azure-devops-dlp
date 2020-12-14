@@ -1,0 +1,81 @@
+{
+  "subscriptionId": "a5683aa6-12fb-427c-a065-1f5c337b4d67",
+  "notificationId": 5,
+  "id": "fea42956-6e70-4cb7-9880-c1732fb6bfc4",
+  "eventType": "workitem.restored",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Issue #42 (Sample Issue Title - Edited) restored by Dhruvit Raithatha\r\n(https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=42)",
+    "html": "<a href=\"https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&amp;id=42\">Issue #42</a> (Sample Issue Title - Edited) restored by Dhruvit Raithatha",
+    "markdown": "[Issue #42](https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=42) (Sample Issue Title - Edited) restored by Dhruvit Raithatha"
+  },
+  "detailedMessage": {
+    "text": "Issue #42 (Sample Issue Title - Edited) restored by Dhruvit Raithatha\r\n(https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=42)\r\n\r\n- Area: TCXTest\r\n- Iteration: TCXTest\\Sprint 1\r\n- State: Active\r\n- Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com>\r\n",
+    "html": "<a href=\"https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&amp;id=42\">Issue #42</a> (Sample Issue Title - Edited) restored by Dhruvit Raithatha<ul>\r\n<li>Area: TCXTest</li>\r\n<li>Iteration: TCXTest\\Sprint 1</li>\r\n<li>State: Active</li>\r\n<li>Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com></li></ul>",
+    "markdown": "[Issue #42](https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=42) (Sample Issue Title - Edited) restored by Dhruvit Raithatha\r\n\r\n* Area: TCXTest\r\n* Iteration: TCXTest\\Sprint 1\r\n* State: Active\r\n* Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com>\r\n"
+  },
+  "resource": {
+    "id": 42,
+    "rev": 4,
+    "fields": {
+      "System.AreaPath": "TCXTest",
+      "System.TeamProject": "TCXTest",
+      "System.IterationPath": "TCXTest\\Sprint 1",
+      "System.WorkItemType": "Issue",
+      "System.State": "Active",
+      "System.Reason": "New",
+      "System.AssignedTo": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CreatedDate": "2020-12-08T07:36:59.76Z",
+      "System.CreatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.ChangedDate": "2020-12-08T07:38:36.76Z",
+      "System.ChangedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CommentCount": 0,
+      "System.Title": "Sample Issue Title - Edited",
+      "Microsoft.VSTS.Common.StateChangeDate": "2020-12-08T07:36:59.76Z",
+      "Microsoft.VSTS.Common.ActivatedDate": "2020-12-08T07:36:59.76Z",
+      "Microsoft.VSTS.Common.ActivatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "Microsoft.VSTS.Common.Priority": 2,
+      "System.Description": "<div>Sample Issue Description&nbsp;- Edited<br></div>"
+    },
+    "_links": {
+      "self": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/42"
+      },
+      "workItemUpdates": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/42/updates"
+      },
+      "workItemRevisions": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/42/revisions"
+      },
+      "workItemComments": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/42/comments"
+      },
+      "html": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_workitems/edit/42"
+      },
+      "workItemType": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItemTypes/Issue"
+      },
+      "fields": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/fields"
+      }
+    },
+    "url": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/42"
+  },
+  "resourceVersion": "1.0",
+  "resourceContainers": {
+    "collection": {
+      "id": "fa5c7c57-df2b-4074-af83-a4296d629c6e",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "account": {
+      "id": "2efc7de2-f7f8-463c-bb87-4f1ac17db7ce",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "project": {
+      "id": "dc2d3852-e28c-4bc3-aa3c-a7a457456730",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    }
+  },
+  "createdDate": "2020-12-08T07:38:43.468784Z"
+}

@@ -1,0 +1,72 @@
+{
+  "subscriptionId": "bf5c1cdc-746f-4ba4-ad42-d936b8b89896",
+  "notificationId": 1,
+  "id": "cd03b13e-5f76-4462-83a1-82a73f81c557",
+  "eventType": "workitem.deleted",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Bug #39 (Sample Bug #2 (Edited - 2)) deleted by Dhruvit Raithatha",
+    "html": "Bug #39 (Sample Bug #2 (Edited - 2)) deleted by Dhruvit Raithatha",
+    "markdown": "Bug #39 (Sample Bug #2 (Edited - 2)) deleted by Dhruvit Raithatha"
+  },
+  "detailedMessage": {
+    "text": "Bug #39 (Sample Bug #2 (Edited - 2)) deleted by Dhruvit Raithatha\r\n\r\n- Area: TCXTest\r\n- Iteration: TCXTest\\Sprint 1\r\n- State: Resolved\r\n- Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com>\r\n- Severity: 3 - Medium\r\n",
+    "html": "Bug #39 (Sample Bug #2 (Edited - 2)) deleted by Dhruvit Raithatha<ul>\r\n<li>Area: TCXTest</li>\r\n<li>Iteration: TCXTest\\Sprint 1</li>\r\n<li>State: Resolved</li>\r\n<li>Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com></li>\r\n<li>Severity: 3 - Medium</li></ul>",
+    "markdown": "Bug #39 (Sample Bug #2 (Edited - 2)) deleted by Dhruvit Raithatha\r\n\r\n* Area: TCXTest\r\n* Iteration: TCXTest\\Sprint 1\r\n* State: Resolved\r\n* Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com>\r\n* Severity: 3 - Medium\r\n"
+  },
+  "resource": {
+    "id": 39,
+    "rev": 4,
+    "fields": {
+      "System.AreaPath": "TCXTest",
+      "System.TeamProject": "TCXTest",
+      "System.IterationPath": "TCXTest\\Sprint 1",
+      "System.WorkItemType": "Bug",
+      "System.State": "Resolved",
+      "System.Reason": "Resolved in error",
+      "System.AssignedTo": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CreatedDate": "2020-12-07T18:39:05.717Z",
+      "System.CreatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.ChangedDate": "2020-12-07T18:48:29.61Z",
+      "System.ChangedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CommentCount": 0,
+      "System.Title": "Sample Bug #2 (Edited - 2)",
+      "Microsoft.VSTS.Common.StateChangeDate": "2020-12-07T18:46:15.96Z",
+      "Microsoft.VSTS.Common.ActivatedDate": "2020-12-07T18:46:15.96Z",
+      "Microsoft.VSTS.Common.ActivatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "Microsoft.VSTS.Common.Priority": 2,
+      "Microsoft.VSTS.Common.Severity": "3 - Medium",
+      "Microsoft.VSTS.Common.ValueArea": "Business",
+      "Microsoft.VSTS.TCM.SystemInfo": "<div>Sample System Info (Edited - 2)<br></div>",
+      "Microsoft.VSTS.TCM.ReproSteps": "<div>Sample Repro Step (Edited - 2)<br></div>"
+    },
+    "_links": {
+      "self": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/recyclebin/39"
+      },
+      "workItemType": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItemTypes/Bug"
+      },
+      "fields": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/fields"
+      }
+    },
+    "url": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/recyclebin/39"
+  },
+  "resourceVersion": "1.0",
+  "resourceContainers": {
+    "collection": {
+      "id": "fa5c7c57-df2b-4074-af83-a4296d629c6e",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "account": {
+      "id": "2efc7de2-f7f8-463c-bb87-4f1ac17db7ce",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "project": {
+      "id": "dc2d3852-e28c-4bc3-aa3c-a7a457456730",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    }
+  },
+  "createdDate": "2020-12-07T18:48:36.6831256Z"
+}

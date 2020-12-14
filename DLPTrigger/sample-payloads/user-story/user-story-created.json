@@ -1,0 +1,80 @@
+{
+  "subscriptionId": "81a0c7ad-0989-4b88-8aa1-7c015c3685e2",
+  "notificationId": 1,
+  "id": "935f7af0-8252-4ea0-ac85-0cfccad26235",
+  "eventType": "workitem.created",
+  "publisherId": "tfs",
+  "message": {
+    "text": "User Story #37 (Test Title) created by Dhruvit Raithatha\\r\\n(https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37)",
+    "html": "<a href=\"https: //dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&amp;id=37\">User Story #37</a> (Test Title) created by Dhruvit Raithatha",
+    "markdown": "[User Story #37](https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37) (Test Title) created by Dhruvit Raithatha"
+  },
+  "detailedMessage": {
+    "text": "User Story #37 (Test Title) created by Dhruvit Raithatha\\r\\n(https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37)\\r\\n\\r\\n- Area: TCXTest\\r\\n- Iteration: TCXTest\\\\Sprint 1\\r\\n- State: New\\r\\n",
+    "html": "<a href=\"https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&amp;id=37\">User Story #37</a> (Test Title) created by Dhruvit Raithatha<ul>\\r\\n<li>Area: TCXTest</li>\\r\\n<li>Iteration: TCXTest\\\\Sprint 1</li>\\r\\n<li>State: New</li></ul>",
+    "markdown": "[User Story #37](https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37) (Test Title) created by Dhruvit Raithatha\\r\\n\\r\\n* Area: TCXTest\\r\\n* Iteration: TCXTest\\\\Sprint 1\\r\\n* State: New\\r\\n"
+  },
+  "resource": {
+    "id": 37,
+    "rev": 1,
+    "fields": {
+      "System.AreaPath": "TCXTest",
+      "System.TeamProject": "TCXTest",
+      "System.IterationPath": "TCXTest\\\\Sprint 1",
+      "System.WorkItemType": "User Story",
+      "System.State": "New",
+      "System.Reason": "New",
+      "System.CreatedDate": "2020-12-07T18:33:38.55Z",
+      "System.CreatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.ChangedDate": "2020-12-07T18:33:38.55Z",
+      "System.ChangedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CommentCount": 0,
+      "System.Title": "Test Title",
+      "Microsoft.VSTS.Common.StateChangeDate": "2020-12-07T18:33:38.55Z",
+      "Microsoft.VSTS.Common.Priority": 2,
+      "Microsoft.VSTS.Common.ValueArea": "Business",
+      "System.Description": "<div>Test Description</div>",
+      "Microsoft.VSTS.Common.AcceptanceCriteria": "<div>Test Acceptance Criteria</div>"
+    },
+    "_links": {
+      "self": [
+        null
+      ],
+      "workItemUpdates": [
+        null
+      ],
+      "workItemRevisions": [
+        null
+      ],
+      "workItemComments": [
+        null
+      ],
+      "html": [
+        null
+      ],
+      "workItemType": [
+        null
+      ],
+      "fields": [
+        null
+      ]
+    },
+    "url": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37"
+  },
+  "resourceVersion": "1.0",
+  "resourceContainers": {
+    "collection": {
+      "id": "fa5c7c57-df2b-4074-af83-a4296d629c6e",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "account": {
+      "id": "2efc7de2-f7f8-463c-bb87-4f1ac17db7ce",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "project": {
+      "id": "dc2d3852-e28c-4bc3-aa3c-a7a457456730",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    }
+  },
+  "createdDate": "2020-12-07T18:33:45.5742625Z"
+}

@@ -1,0 +1,68 @@
+{
+  "subscriptionId": "bf5c1cdc-746f-4ba4-ad42-d936b8b89896",
+  "notificationId": 3,
+  "id": "c9dc7933-ca84-49f7-b8ed-23ac40d9aa2e",
+  "eventType": "workitem.deleted",
+  "publisherId": "tfs",
+  "message": {
+    "text": "User Story #37 (Test Title - Edited - 2) deleted by Dhruvit Raithatha",
+    "html": "User Story #37 (Test Title - Edited - 2) deleted by Dhruvit Raithatha",
+    "markdown": "User Story #37 (Test Title - Edited - 2) deleted by Dhruvit Raithatha"
+  },
+  "detailedMessage": {
+    "text": "User Story #37 (Test Title - Edited - 2) deleted by Dhruvit Raithatha\r\n\r\n- Area: TCXTest\r\n- Iteration: TCXTest\\Sprint 1\r\n- State: New\r\n",
+    "html": "User Story #37 (Test Title - Edited - 2) deleted by Dhruvit Raithatha<ul>\r\n<li>Area: TCXTest</li>\r\n<li>Iteration: TCXTest\\Sprint 1</li>\r\n<li>State: New</li></ul>",
+    "markdown": "User Story #37 (Test Title - Edited - 2) deleted by Dhruvit Raithatha\r\n\r\n* Area: TCXTest\r\n* Iteration: TCXTest\\Sprint 1\r\n* State: New\r\n"
+  },
+  "resource": {
+    "id": 37,
+    "rev": 4,
+    "fields": {
+      "System.AreaPath": "TCXTest",
+      "System.TeamProject": "TCXTest",
+      "System.IterationPath": "TCXTest\\Sprint 1",
+      "System.WorkItemType": "User Story",
+      "System.State": "New",
+      "System.Reason": "New",
+      "System.CreatedDate": "2020-12-07T18:33:38.55Z",
+      "System.CreatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.ChangedDate": "2020-12-08T07:32:26.01Z",
+      "System.ChangedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CommentCount": 0,
+      "System.Title": "Test Title - Edited - 2",
+      "Microsoft.VSTS.Common.StateChangeDate": "2020-12-07T18:33:38.55Z",
+      "Microsoft.VSTS.Common.Priority": 2,
+      "Microsoft.VSTS.Common.ValueArea": "Business",
+      "System.Description": "<div>Test Description&nbsp;- Edited - 2</div>",
+      "Microsoft.VSTS.Common.AcceptanceCriteria": "<div>Test Acceptance Criteria&nbsp;- Edited - 2</div>"
+    },
+    "_links": {
+      "self": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/recyclebin/37"
+      },
+      "workItemType": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItemTypes/User%20Story"
+      },
+      "fields": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/fields"
+      }
+    },
+    "url": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/recyclebin/37"
+  },
+  "resourceVersion": "1.0",
+  "resourceContainers": {
+    "collection": {
+      "id": "fa5c7c57-df2b-4074-af83-a4296d629c6e",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "account": {
+      "id": "2efc7de2-f7f8-463c-bb87-4f1ac17db7ce",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "project": {
+      "id": "dc2d3852-e28c-4bc3-aa3c-a7a457456730",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    }
+  },
+  "createdDate": "2020-12-08T07:32:33.2048081Z"
+}

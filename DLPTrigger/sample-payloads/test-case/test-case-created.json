@@ -1,0 +1,82 @@
+{
+  "subscriptionId": "81a0c7ad-0989-4b88-8aa1-7c015c3685e2",
+  "notificationId": 9,
+  "id": "9ec7c762-a9e9-4234-ac39-a97eeb35eaf3",
+  "eventType": "workitem.created",
+  "publisherId": "tfs",
+  "message": {
+    "text": "Test Case #44 (Sample Test Case Title) created by Dhruvit Raithatha\r\n(https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=44)",
+    "html": "<a href=\"https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&amp;id=44\">Test Case #44</a> (Sample Test Case Title) created by Dhruvit Raithatha",
+    "markdown": "[Test Case #44](https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=44) (Sample Test Case Title) created by Dhruvit Raithatha"
+  },
+  "detailedMessage": {
+    "text": "Test Case #44 (Sample Test Case Title) created by Dhruvit Raithatha\r\n(https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=44)\r\n\r\n- Area: TCXTest\r\n- Iteration: TCXTest\\Sprint 1\r\n- State: Design\r\n- Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com>\r\n",
+    "html": "<a href=\"https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&amp;id=44\">Test Case #44</a> (Sample Test Case Title) created by Dhruvit Raithatha<ul>\r\n<li>Area: TCXTest</li>\r\n<li>Iteration: TCXTest\\Sprint 1</li>\r\n<li>State: Design</li>\r\n<li>Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com></li></ul>",
+    "markdown": "[Test Case #44](https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=44) (Sample Test Case Title) created by Dhruvit Raithatha\r\n\r\n* Area: TCXTest\r\n* Iteration: TCXTest\\Sprint 1\r\n* State: Design\r\n* Assigned to: Dhruvit Raithatha <dhruvitraithatha@live.com>\r\n"
+  },
+  "resource": {
+    "id": 44,
+    "rev": 1,
+    "fields": {
+      "System.AreaPath": "TCXTest",
+      "System.TeamProject": "TCXTest",
+      "System.IterationPath": "TCXTest\\Sprint 1",
+      "System.WorkItemType": "Test Case",
+      "System.State": "Design",
+      "System.Reason": "New",
+      "System.AssignedTo": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CreatedDate": "2020-12-08T07:42:27.62Z",
+      "System.CreatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.ChangedDate": "2020-12-08T07:42:27.62Z",
+      "System.ChangedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "System.CommentCount": 0,
+      "System.Title": "Sample Test Case Title",
+      "Microsoft.VSTS.Common.StateChangeDate": "2020-12-08T07:42:27.62Z",
+      "Microsoft.VSTS.Common.ActivatedDate": "2020-12-08T07:42:27.62Z",
+      "Microsoft.VSTS.Common.ActivatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "Microsoft.VSTS.Common.Priority": 2,
+      "Microsoft.VSTS.TCM.AutomationStatus": "Not Automated",
+      "Microsoft.VSTS.TCM.Steps": "<steps id=\"0\" last=\"4\"><step id=\"2\" type=\"ValidateStep\"><parameterizedString isformatted=\"true\">&lt;DIV&gt;&lt;P&gt;Sample Test Case Title Step - 1&lt;BR/&gt;&lt;/P&gt;&lt;/DIV&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;DIV&gt;&lt;P&gt;Sample Test Case Expected Result - 1&lt;BR/&gt;&lt;/P&gt;&lt;/DIV&gt;</parameterizedString><description/></step><step id=\"3\" type=\"ValidateStep\"><parameterizedString isformatted=\"true\">&lt;DIV&gt;&lt;P&gt;Sample Test Case Title Step - 2&lt;BR/&gt;&lt;/P&gt;&lt;/DIV&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;DIV&gt;&lt;P&gt;Sample Test Case Title - 2&lt;BR/&gt;&lt;/P&gt;&lt;/DIV&gt;</parameterizedString><description/></step><step id=\"4\" type=\"ActionStep\"><parameterizedString isformatted=\"true\">&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;BR/&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</parameterizedString><parameterizedString isformatted=\"true\">&lt;DIV&gt;&lt;P&gt;&lt;BR/&gt;&lt;/P&gt;&lt;/DIV&gt;</parameterizedString><description/></step></steps>"
+    },
+    "_links": {
+      "self": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/44"
+      },
+      "workItemUpdates": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/44/updates"
+      },
+      "workItemRevisions": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/44/revisions"
+      },
+      "workItemComments": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/44/comments"
+      },
+      "html": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_workitems/edit/44"
+      },
+      "workItemType": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItemTypes/Test%20Case"
+      },
+      "fields": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/fields"
+      }
+    },
+    "url": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/44"
+  },
+  "resourceVersion": "1.0",
+  "resourceContainers": {
+    "collection": {
+      "id": "fa5c7c57-df2b-4074-af83-a4296d629c6e",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "account": {
+      "id": "2efc7de2-f7f8-463c-bb87-4f1ac17db7ce",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "project": {
+      "id": "dc2d3852-e28c-4bc3-aa3c-a7a457456730",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    }
+  },
+  "createdDate": "2020-12-08T07:42:34.488997Z"
+}

@@ -1,0 +1,137 @@
+{
+  "subscriptionId": "ef58b69e-6a3f-454f-8a14-5d0a0d6b7e5a",
+  "notificationId": 6,
+  "id": "cff85ae4-d71a-42e7-85a4-7e69ef2afc96",
+  "eventType": "workitem.updated",
+  "publisherId": "tfs",
+  "message": {
+    "text": "User Story #37 (Test Title - Edited - 2) updated by Dhruvit Raithatha\r\n(https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37)",
+    "html": "<a href=\"https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&amp;id=37\">User Story #37</a> (Test Title - Edited - 2) updated by Dhruvit Raithatha",
+    "markdown": "[User Story #37](https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37) (Test Title - Edited - 2) updated by Dhruvit Raithatha"
+  },
+  "detailedMessage": {
+    "text": "User Story #37 (Test Title - Edited - 2) updated by Dhruvit Raithatha\r\n(https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37)\r\n\r\n- New Title: Test Title - Edited - 2\r\n",
+    "html": "<a href=\"https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&amp;id=37\">User Story #37</a> (Test Title - Edited - 2) updated by Dhruvit Raithatha<ul>\r\n<li>New Title: Test Title - Edited - 2</li></ul>",
+    "markdown": "[User Story #37](https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37) (Test Title - Edited - 2) updated by Dhruvit Raithatha\r\n\r\n* New Title: Test Title - Edited - 2\r\n"
+  },
+  "resource": {
+    "id": 3,
+    "workItemId": 37,
+    "rev": 3,
+    "revisedBy": {
+      "id": "50c1ff23-2115-6417-870d-38fa3e28ee90",
+      "name": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+      "displayName": "Dhruvit Raithatha",
+      "url": "https://spsprodsin1.vssps.visualstudio.com/A2efc7de2-f7f8-463c-bb87-4f1ac17db7ce/_apis/Identities/50c1ff23-2115-6417-870d-38fa3e28ee90",
+      "_links": {
+        "avatar": {
+          "href": "https://dev.azure.com/TheGreyLake/_apis/GraphProfile/MemberAvatars/msa.NTBjMWZmMjMtMjExNS03NDE3LTg3MGQtMzhmYTNlMjhlZTkw"
+        }
+      },
+      "uniqueName": "dhruvitraithatha@live.com",
+      "imageUrl": "https://dev.azure.com/TheGreyLake/_apis/GraphProfile/MemberAvatars/msa.NTBjMWZmMjMtMjExNS03NDE3LTg3MGQtMzhmYTNlMjhlZTkw",
+      "descriptor": "msa.NTBjMWZmMjMtMjExNS03NDE3LTg3MGQtMzhmYTNlMjhlZTkw"
+    },
+    "revisedDate": "9999-01-01T00:00:00Z",
+    "fields": {
+      "System.Rev": {
+        "oldValue": 2,
+        "newValue": 3
+      },
+      "System.AuthorizedDate": {
+        "oldValue": "2020-12-08T07:25:19.62Z",
+        "newValue": "2020-12-08T07:31:44.337Z"
+      },
+      "System.RevisedDate": {
+        "oldValue": "2020-12-08T07:31:44.337Z",
+        "newValue": "9999-01-01T00:00:00Z"
+      },
+      "System.ChangedDate": {
+        "oldValue": "2020-12-08T07:25:19.62Z",
+        "newValue": "2020-12-08T07:31:44.337Z"
+      },
+      "System.Watermark": {
+        "oldValue": 73,
+        "newValue": 74
+      },
+      "System.Title": {
+        "oldValue": "Test Title - Edited",
+        "newValue": "Test Title - Edited - 2"
+      },
+      "System.Description": {
+        "oldValue": "<div>Test Description&nbsp;- Edited</div>",
+        "newValue": "<div>Test Description&nbsp;- Edited - 2</div>"
+      },
+      "Microsoft.VSTS.Common.AcceptanceCriteria": {
+        "oldValue": "<div>Test Acceptance Criteria&nbsp;- Edited</div>",
+        "newValue": "<div>Test Acceptance Criteria&nbsp;- Edited - 2</div>"
+      }
+    },
+    "_links": {
+      "self": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37/updates/3"
+      },
+      "workItemUpdates": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37/updates"
+      },
+      "parent": {
+        "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37"
+      },
+      "html": {
+        "href": "https://dev.azure.com/TheGreyLake/web/wi.aspx?pcguid=fa5c7c57-df2b-4074-af83-a4296d629c6e&id=37"
+      }
+    },
+    "url": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37/updates/3",
+    "revision": {
+      "id": 37,
+      "rev": 3,
+      "fields": {
+        "System.AreaPath": "TCXTest",
+        "System.TeamProject": "TCXTest",
+        "System.IterationPath": "TCXTest\\Sprint 1",
+        "System.WorkItemType": "User Story",
+        "System.State": "New",
+        "System.Reason": "New",
+        "System.CreatedDate": "2020-12-07T18:33:38.55Z",
+        "System.CreatedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+        "System.ChangedDate": "2020-12-08T07:31:44.337Z",
+        "System.ChangedBy": "Dhruvit Raithatha <dhruvitraithatha@live.com>",
+        "System.CommentCount": 0,
+        "System.Title": "Test Title - Edited - 2",
+        "Microsoft.VSTS.Common.StateChangeDate": "2020-12-07T18:33:38.55Z",
+        "Microsoft.VSTS.Common.Priority": 2,
+        "Microsoft.VSTS.Common.ValueArea": "Business",
+        "System.Description": "<div>Test Description&nbsp;- Edited - 2</div>",
+        "Microsoft.VSTS.Common.AcceptanceCriteria": "<div>Test Acceptance Criteria&nbsp;- Edited - 2</div>"
+      },
+      "_links": {
+        "self": {
+          "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37/revisions/3"
+        },
+        "workItemRevisions": {
+          "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37/revisions"
+        },
+        "parent": {
+          "href": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37"
+        }
+      },
+      "url": "https://dev.azure.com/TheGreyLake/dc2d3852-e28c-4bc3-aa3c-a7a457456730/_apis/wit/workItems/37/revisions/3"
+    }
+  },
+  "resourceVersion": "1.0",
+  "resourceContainers": {
+    "collection": {
+      "id": "fa5c7c57-df2b-4074-af83-a4296d629c6e",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "account": {
+      "id": "2efc7de2-f7f8-463c-bb87-4f1ac17db7ce",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    },
+    "project": {
+      "id": "dc2d3852-e28c-4bc3-aa3c-a7a457456730",
+      "baseUrl": "https://dev.azure.com/TheGreyLake/"
+    }
+  },
+  "createdDate": "2020-12-08T07:31:51.108367Z"
+}
