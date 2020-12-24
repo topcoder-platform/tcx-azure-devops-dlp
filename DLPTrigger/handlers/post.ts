@@ -37,18 +37,21 @@ export default async function handlePostRequest (
     }
   }
   if (!workItemType) {
-    throw Boom.badRequest(`Did not find expected property at path: ${WORKITEM_TYPE_FIELD_PATHS.join('.')}`)
+    throw Boom.badRequest(`Did not find expected property at path: ${WORKITEM_TYPE_FIELD_PATHS.map(i => i.join('.')).join(', ')}`)
   }
   const projectId = _.get(req.body, PROJECT_ID_FIELD_PATH)
   if (!projectId) {
-    throw Boom.badRequest(`Did not find expected property at path: ${PROJECT_ID_FIELD_PATH.join('.')}`)
+    throw Boom.badRequest(`Did not find expected property at path: ${PROJECT_ID_FIELD_PATH.join(', ')}`)
   }
   let resourceId: string | undefined
   for (const resourceIdFieldPath of RESOURCE_ID_FIELD_PATHS) {
     resourceId = _.get(req.body, resourceIdFieldPath)
+    if (resourceId) {
+      break
+    }
   }
   if (!resourceId) {
-    throw Boom.badRequest(`Did not find expected property at path: ${RESOURCE_ID_FIELD_PATHS.join('.')}`)
+    throw Boom.badRequest(`Did not find expected property at path: ${RESOURCE_ID_FIELD_PATHS.map(i => i.join('.')).join(', ')}`)
   }
   const fieldMap = TARGET_FIELDS[workItemType]
   if (!fieldMap) {
