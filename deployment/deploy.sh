@@ -179,7 +179,7 @@ function setupFunction () {
   echo "Deploying the function app"
   npm i
   npm run build
-  func azure functionapp publish $FUNCTION_APP_NAME
+  func azure functionapp publish $FUNCTION_APP_NAME --node
   popd
 }
 
