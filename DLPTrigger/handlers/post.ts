@@ -26,7 +26,7 @@ interface FieldMapRecord {
 }
 
 export default async function handlePostRequest (
-  context: Context,
+  _context: Context,
   req: HttpRequest
 ) {
   let workItemType: WORKITEM_TYPES | undefined
@@ -60,9 +60,12 @@ export default async function handlePostRequest (
   const records: FieldMapRecord[] = []
   let recordString: string = ''
   for (const fieldItem of fieldMap) {
-    let fieldValue: string = _.get(req.body, [...fieldItem.fieldPath, 'newValue'])
-    if (!fieldValue) {
-      fieldValue = _.get(req.body, fieldItem.fieldPath)
+    let fieldValue: string | null = null
+    for (const fieldPath of fieldItem.fieldPaths) {
+      fieldValue = _.get(req.body, fieldPath)
+      if (fieldValue) {
+        break
+      }
     }
     if (!fieldValue || !_.isString(fieldValue)) {
       records.push({

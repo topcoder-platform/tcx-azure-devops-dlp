@@ -104,7 +104,7 @@ export const getItem = async (projectId: string, resourceId: string): Promise<Dl
 export const setNoErrors = async (dlpStatusItem: DlpStatusItem) => {
   for (const field of Object.values(StatusFields)) {
     dlpStatusItem[field].issues = []
-    dlpStatusItem.detailsStatus.status = DlpStatus.NO_ISSUES
+    dlpStatusItem[field].status = DlpStatus.NO_ISSUES
   }
   const record = await dlpStatusItem.save()
   return record
