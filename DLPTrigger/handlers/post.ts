@@ -125,6 +125,14 @@ export default async function handlePostRequest (
     adoWorkItemsDlpStatus[statusField].status = DlpStatus.NO_ISSUES
     adoWorkItemsDlpStatus[statusField].issues = []
   }
+  let dlpStatus = DlpStatus.NO_ISSUES
+  for (const statusField of Object.values(StatusFields)) {
+    if (adoWorkItemsDlpStatus[statusField].status === DlpStatus.ISSUES_FOUND) {
+      dlpStatus = DlpStatus.ISSUES_FOUND
+      break
+    }
+  }
+  adoWorkItemsDlpStatus.dlpStatus = dlpStatus
   await adoWorkItemsDlpStatus.save()
   return { message: 'OK' }
 }
