@@ -11,20 +11,20 @@ set -e
 RESOURCE_LOCATTION="westus2"
 
 # Resource Group Config
-RESOURCE_GROUP_NAME="tcx_ado_dlp_rg"
+RESOURCE_GROUP_NAME="prod-tcx_ado_dlp_rg"
 
 # CosmosDB config
-COSMOS_ACCOUNT_NAME="tcx-ado-dlp-cosmos-account"
+COSMOS_ACCOUNT_NAME="prod-tcx-ado-dlp-cosmos-account"
 
 # AKS Config
-AKS_CLUSTER_NAME="tcx-ado-dlp-cluster"
+AKS_CLUSTER_NAME="prod-tcx-ado-dlp-cluster"
 AKS_NODE_COUNT=2
 
 # Storage Account Config
-STORAGE_ACCOUNT_NAME="tcxadodlpstorage"
+STORAGE_ACCOUNT_NAME="prodtcxdlpstorage"
 
 # Function App Config
-FUNCTION_APP_NAME="tcx-ado-dlp-function"
+FUNCTION_APP_NAME="prod-tcx-ado-dlp-function"
 
 #########
 ### LOGIC SECTION
@@ -180,6 +180,8 @@ function setupFunction () {
   npm i
   npm run build
   func azure functionapp publish $FUNCTION_APP_NAME --node
+  az functionapp cors remove -g $RESOURCE_GROUP_NAME -n $FUNCTION_APP_NAME --allowed-origins
+  az functionapp cors add -g $RESOURCE_GROUP_NAME -n $FUNCTION_APP_NAME --allowed-origins *
   popd
 }
 
