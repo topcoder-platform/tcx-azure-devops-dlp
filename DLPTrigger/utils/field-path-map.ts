@@ -2,13 +2,13 @@ import { StatusFields } from '../models/AdoWorkItemsDlpStatus'
 
 // Generic Field Types
 export const WORKITEM_TYPE_FIELD_PATHS = [
-  ['resource', 'fields', 'System.WorkItemType'],
-  ['resource', 'revision', 'fields', 'System.WorkItemType']
+  ['resource', 'revision', 'fields', 'System.WorkItemType'],
+  ['resource', 'fields', 'System.WorkItemType']
 ]
 export const PROJECT_ID_FIELD_PATH = ['resourceContainers', 'project', 'id']
 export const RESOURCE_ID_FIELD_PATHS = [
-  ['resource', 'id'],
-  ['resource', 'revision', 'id']
+  ['resource', 'revision', 'id'],
+  ['resource', 'id']
 ]
 
 // List of Workitem Types
@@ -24,7 +24,7 @@ export enum WORKITEM_TYPES {
 
 export interface FieldMapItem {
   fieldName: string
-  fieldPath: string[]
+  fieldPaths: string[][]
   fieldType: 'text' | 'html' | 'xml'
   dbField: StatusFields
 }
@@ -33,19 +33,28 @@ export interface FieldMapItem {
 const BUG_FIELD_MAP: FieldMapItem[] = [
   {
     fieldName: 'Title',
-    fieldPath: ['resource', 'fields', 'System.Title'],
+    fieldPaths: [
+      ['resource', 'revision', 'fields', 'System.Title'],
+      ['resource', 'fields', 'System.Title']
+    ],
     fieldType: 'text',
     dbField: StatusFields.Title
   },
   {
     fieldName: 'System Info',
-    fieldPath: ['resource', 'fields', 'Microsoft.VSTS.TCM.SystemInfo'],
+    fieldPaths: [
+      ['resource', 'revision', 'fields', 'Microsoft.VSTS.TCM.SystemInfo'],
+      ['resource', 'fields', 'Microsoft.VSTS.TCM.SystemInfo']
+    ],
     fieldType: 'html',
     dbField: StatusFields.SystemInfo
   },
   {
     fieldName: 'Reproduction Steps',
-    fieldPath: ['resource', 'fields', 'Microsoft.VSTS.TCM.ReproSteps'],
+    fieldPaths: [
+      ['resource', 'revision', 'fields', 'Microsoft.VSTS.TCM.ReproSteps'],
+      ['resource', 'fields', 'Microsoft.VSTS.TCM.ReproSteps']
+    ],
     fieldType: 'html',
     dbField: StatusFields.ReproductionSteps
   }
@@ -55,13 +64,19 @@ const BUG_FIELD_MAP: FieldMapItem[] = [
 const EPIC_FIELD_MAP: FieldMapItem[] = [
   {
     fieldName: 'Title',
-    fieldPath: ['resource', 'fields', 'System.Title'],
+    fieldPaths: [
+      ['resource', 'revision', 'fields', 'System.Title'],
+      ['resource', 'fields', 'System.Title']
+    ],
     fieldType: 'text',
     dbField: StatusFields.Title
   },
   {
     fieldName: 'Description',
-    fieldPath: ['resource', 'fields', 'System.Description'],
+    fieldPaths: [
+      ['resource', 'revision', 'fields', 'System.Description'],
+      ['resource', 'fields', 'System.Description']
+    ],
     fieldType: 'html',
     dbField: StatusFields.Description
   }
@@ -80,13 +95,19 @@ const TASK_FIELD_MAP: FieldMapItem[] = [...EPIC_FIELD_MAP]
 const TEST_CASE_FIELD_MAP: FieldMapItem[] = [
   {
     fieldName: 'Title',
-    fieldPath: ['resource', 'fields', 'System.Title'],
+    fieldPaths: [
+      ['resource', 'revision', 'fields', 'System.Title'],
+      ['resource', 'fields', 'System.Title']
+    ],
     fieldType: 'text',
     dbField: StatusFields.Title
   },
   {
     fieldName: 'Steps',
-    fieldPath: ['resource', 'fields', 'Microsoft.VSTS.TCM.Steps'],
+    fieldPaths: [
+      ['resource', 'revision', 'fields', 'Microsoft.VSTS.TCM.Steps'],
+      ['resource', 'fields', 'Microsoft.VSTS.TCM.Steps']
+    ],
     fieldType: 'xml',
     dbField: StatusFields.ReproductionSteps
   }
@@ -97,7 +118,10 @@ const USER_STORY_FIELD_MAP: FieldMapItem[] = [
   ...EPIC_FIELD_MAP,
   {
     fieldName: 'Acceptance Criteria',
-    fieldPath: ['resource', 'fields', 'Microsoft.VSTS.Common.AcceptanceCriteria'],
+    fieldPaths: [
+      ['resource', 'revision', 'fields', 'Microsoft.VSTS.Common.AcceptanceCriteria'],
+      ['resource', 'fields', 'Microsoft.VSTS.Common.AcceptanceCriteria']
+    ],
     fieldType: 'html',
     dbField: StatusFields.AcceptanceCriteria
   }
