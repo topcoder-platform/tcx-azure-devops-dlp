@@ -31,6 +31,7 @@ interface IStatusField {
 export interface DlpStatusItem extends mongoose.Document {
   projectId: string
   resourceId: string
+  dlpStatus: DlpStatus
   [StatusFields.Title]: IStatusField
   [StatusFields.Details]: IStatusField
   [StatusFields.AcceptanceCriteria]: IStatusField
@@ -58,6 +59,12 @@ const schemaDefinition = {
     required: true,
     minLength: 1,
     index: true
+  },
+  dlpStatus: {
+    type: String,
+    enum: Object.values(DlpStatus),
+    required: true,
+    default: DlpStatus.UNSCANNED
   },
   ...(Object.values(StatusFields).reduce((acc, val) => {
     acc[val] = {
@@ -106,6 +113,7 @@ export const setNoErrors = async (dlpStatusItem: DlpStatusItem) => {
     dlpStatusItem[field].issues = []
     dlpStatusItem[field].status = DlpStatus.NO_ISSUES
   }
+  dlpStatusItem.dlpStatus = DlpStatus.NO_ISSUES
   const record = await dlpStatusItem.save()
   return record
 }
