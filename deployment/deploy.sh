@@ -181,7 +181,7 @@ function setupFunction () {
   npm run build
   func azure functionapp publish $FUNCTION_APP_NAME --node
   az functionapp cors remove -g $RESOURCE_GROUP_NAME -n $FUNCTION_APP_NAME --allowed-origins
-  az functionapp cors add -g $RESOURCE_GROUP_NAME -n $FUNCTION_APP_NAME --allowed-origins *
+  az functionapp cors add -g $RESOURCE_GROUP_NAME -n $FUNCTION_APP_NAME --allowed-origins '*'
   popd
 }
 
