@@ -2,13 +2,14 @@ import { AzureFunction, Context, HttpRequest } from '@azure/functions'
 import Boom from '@hapi/boom'
 import GetHandler from './handlers/get'
 import PostHandler from './handlers/post'
+import HandshakeHandler from './handlers/handshake'
 import { connect } from './utils/db'
 
 const commonHeaders = {
   'Access-Control-Allow-Credentials': 'true',
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type, Set-Cookie',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, HANDSHAKE',
+  'Access-Control-Allow-Headers': '*',
   'Access-Control-Max-Age': '86400',
   // eslint-disable-next-line quote-props
   'Vary': 'Accept-Encoding, Origin',
@@ -61,6 +62,21 @@ const handlePost: AzureFunction = async function (
   populateContextWithResponse(context, res)
 }
 
+const handleHandshake: AzureFunction = async function (
+  context: Context,
+  req: HttpRequest
+) {
+  const headers = await HandshakeHandler(context, req)
+  context.res = {
+    status: 200,
+    headers: {
+      ...headers,
+      ...commonHeaders,
+      'Access-Control-Expose-Headers': Object.keys(headers).join(' ')
+    }
+  }
+}
+
 /**
  * Entrypoint for the Azure Functions HTTP Request
  * @param context Azure Functions Runtime Context
@@ -81,6 +97,17 @@ const httpTrigger: AzureFunction = async function (
       }
       case 'POST': {
         await handlePost(context, req)
+        break
+      }
+      case 'HANDSHAKE' as any: {
+        await handleHandshake(context, req)
+        break
+      }
+      case 'OPTIONS': {
+        context.res = {
+          status: 200,
+          headers: commonHeaders
+        }
         break
       }
       default: {
