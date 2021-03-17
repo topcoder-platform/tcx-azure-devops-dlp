@@ -2,13 +2,13 @@ import { AzureFunction, Context, HttpRequest } from '@azure/functions'
 import Boom from '@hapi/boom'
 import GetHandler from './handlers/get'
 import PostHandler from './handlers/post'
-import HandshakeHandler from './handlers/handshake'
+import OptionsHandler from './handlers/options'
 import { connect } from './utils/db'
 
 const commonHeaders = {
   'Access-Control-Allow-Credentials': 'true',
   'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS, HANDSHAKE',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
   'Access-Control-Allow-Headers': '*',
   'Access-Control-Max-Age': '86400',
   // eslint-disable-next-line quote-props
@@ -62,11 +62,16 @@ const handlePost: AzureFunction = async function (
   populateContextWithResponse(context, res)
 }
 
-const handleHandshake: AzureFunction = async function (
+/**
+ * Handles Incoming OPTIONS requests
+ * @param context Azure Function Runtime Context
+ * @param req HTTP Request Object
+ */
+const handleOptions: AzureFunction = async function (
   context: Context,
   req: HttpRequest
 ) {
-  const headers = await HandshakeHandler(context, req)
+  const headers = await OptionsHandler(context, req)
   context.res = {
     status: 200,
     headers: {
@@ -78,7 +83,7 @@ const handleHandshake: AzureFunction = async function (
 }
 
 /**
- * Entrypoint for the Azure Functions HTTP Request
+ * Entry-point for the Azure Functions HTTP Request
  * @param context Azure Functions Runtime Context
  * @param req HTTP Request Object
  */
@@ -86,6 +91,10 @@ const httpTrigger: AzureFunction = async function (
   context: Context,
   req: HttpRequest
 ): Promise<void> {
+  // Store lower-case version of the headers
+  for (const key in req.headers) {
+    req.headers[key.toLowerCase()] = req.headers[key];
+  }
   try {
     // Init DB connection
     await connect(context)
@@ -99,15 +108,8 @@ const httpTrigger: AzureFunction = async function (
         await handlePost(context, req)
         break
       }
-      case 'HANDSHAKE' as any: {
-        await handleHandshake(context, req)
-        break
-      }
       case 'OPTIONS': {
-        context.res = {
-          status: 200,
-          headers: commonHeaders
-        }
+        await handleOptions(context, req)
         break
       }
       default: {

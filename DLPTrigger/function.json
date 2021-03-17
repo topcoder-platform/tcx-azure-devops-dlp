@@ -8,8 +8,7 @@
       "methods": [
         "get",
         "post",
-        "options",
-        "handshake"
+        "options"
       ]
     },
     {
