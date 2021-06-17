@@ -94,37 +94,15 @@ function installNginx () {
 }
 
 # Install Presidio to the K8s cluster
-function installRedis () {
-  echo "Installing Redis to the K8s cluster."
-  helm install redis stable/redis \
-    --kube-context $AKS_CLUSTER_NAME \
-    --namespace presidio-system \
-    --create-namespace \
-    --set rbac.create=true \
-    --set usePassword=false \
-    --wait || true
-}
-
-# Install Presidio to the K8s cluster
 function setupPresidio () {
   # Clone the repo
-  echo "Cloning the presidio repo"
-  if [ -d presidio ]; then
-    rm -rf presidio;
-  fi;
-  git clone git@github.com:microsoft/presidio.git
-  pushd presidio/charts/presidio
-  # Update Chart to use with Helm 3
-  echo "Altering Presidio's Helm chart to use it with Helm 3"
-  sed -i -e 's/v1/v2/g' Chart.yaml
+  pushd charts/presidio
   # Install Presidio
   echo "Installing Presidio to the K8s cluster"
   helm install presidio . \
     --kube-context $AKS_CLUSTER_NAME \
     --namespace presidio \
     --create-namespace \
-    --set api.ingress.enabled=true \
-    --set api.ingress.class=nginx \
     --wait || true
   # Fetch the IP Address for the service
   PRESIDIO_IP=$(
@@ -133,11 +111,7 @@ function setupPresidio () {
       --output jsonpath='{.status.loadBalancer.ingress[0].ip}' \
       --context $AKS_CLUSTER_NAME
   )
-  # Cleanup
-  echo "Cleaning up Presidio setup"
   popd
-  rm -rf presidio
-
 }
 
 function setupFunction () {
@@ -168,7 +142,7 @@ function setupFunction () {
     --name $FUNCTION_APP_NAME \
     --resource-group $RESOURCE_GROUP_NAME \
     --output none \
-    --settings "PRESIDIO_ENDPOINT=http://$PRESIDIO_IP/api/v1/projects/1/analyze"
+    --settings "PRESIDIO_ENDPOINT=http://$PRESIDIO_IP/analyze"
   az functionapp config appsettings set \
     --name $FUNCTION_APP_NAME \
     --resource-group $RESOURCE_GROUP_NAME \
@@ -195,7 +169,6 @@ setupResourceGroup
 setupCosmos
 setupAKS
 installNginx
-installRedis
 setupPresidio
 setupFunction
 
