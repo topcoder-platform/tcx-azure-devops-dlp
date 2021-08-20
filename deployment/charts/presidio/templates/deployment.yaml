@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Values.appName }}"
+  namespace: "{{ .Release.Namespace }}"
+spec:
+  selector:
+    matchLabels:
+      app: "{{ .Values.appName }}"
+  replicas: {{ .Values.replicaCount }}
+  template:
+    metadata:
+      name: "{{ .Values.appName }}"
+      labels:
+        app: "{{ .Values.appName }}"
+    spec:
+      containers:
+      - name: "{{ .Values.appName }}"
+        image: "{{ .Values.imageName }}"
+        imagePullPolicy: Always
+      - name: nginx
+        image: nginx:{{ .Values.nginxImageTag }}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: {{ .Values.nginxPort }}
+          protocol: TCP
+        volumeMounts:
+        - name: nginx-config
+          mountPath: /etc/nginx
+      volumes:
+      - name: nginx-config
+        secret:
+          secretName: "{{ .Values.appName }}"

@@ -1,6 +1,6 @@
 ## DEPLOYMENT
 
-The `deploy.sh` file is a bash script that automates the setting up of the Azure infrastructure and the configuration and deployment of the Azure function.
+The `deploy-all.sh` file is a bash script that automates the setting up of the Azure infrastructure and the configuration and deployment of the Azure function.
 
 This script is tested on macOS Big Sur (11.1), and it has the following pre-requisites:
 
@@ -55,27 +55,15 @@ To develop this solution, I have used the following Azure resources
       --set defaultBackend.nodeSelector."beta\.kubernetes\.io/os"=linux \
       --set controller.admissionWebhooks.patch.nodeSelector."beta\.kubernetes\.io/os"=linux
     ```
-- Clone the Presidio repo:
+- Install Presidio
     ```sh
-    git clone git@github.com:microsoft/presidio.git
+    helm upgrade presidio ./charts/presidio \
+      --kube-context $AKS_CLUSTER_NAME \
+      --namespace presidio \
+      --create-namespace \
+      --install \
+      --wait
     ```
-- Update the contents of `presidio/charts/presidio/Chart.yaml`:
-    ```yml
-    apiVersion: v2
-    description: A context aware, born to the cloud, customizable data loss prevention service
-    name: presidio
-    version: 1.0
-    appVersion: latest
-    ```
-- Update the contents of `presidio/deployment/deploy-presidio.sh`
-    ```sh
-    #!/bin/bash
-    REGISTRY=${1:-mcr.microsoft.com}
-    TAG=${2:-latest}
-    helm install redis stable/redis --set usePassword=false,rbac.create=true --namespace presidio-system --wait
-    helm install presidio ../charts/presidio --set registry=$REGISTRY --set tag=$TAG --set api.ingress.enabled=true --set api.ingress.class=nginx --namespace presidio
-    ```
-- Run `presidio/deployment/deploy-presidio.sh`.
 - Run `kubectl get service -n ingress-basic` and look for an external IP address.
 
 ### Azure Cosmos DB
@@ -89,6 +77,6 @@ To develop this solution, I have used the following Azure resources
 Use the following Application Settings with the deployed Azure Function:
 1. `COSMOS_MONGO_CONNECTION_STRING` :`@Microsoft.KeyVault(SecretUri=https://tcx-azure-devops-dlp.vault.azure.net/secrets/cosmos-mongo-connection-string/6ae58c28706887af9e01c500175a0c58)` or `mongodb://root:password@localhost:27017`
 1. `MONGO_SSL`: `true`
-1. `PRESIDIO_ENDPOINT`: `http://<NGINX_INGRESS_IP_ADDRESS>/api/v1/projects/1/analyze`
+1. `PRESIDIO_ENDPOINT`: `http://<NGINX_INGRESS_IP_ADDRESS>/analyze`
 
 Note: For `COSMOS_MONGO_CONNECTION_STRING`, you may use the connection string directly, or you may store the connection string in azure keyvault and have the function resolve it using the config mentioned above.

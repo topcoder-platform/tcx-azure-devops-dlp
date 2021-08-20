@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: "{{ .Values.appName }}"
+  namespace: "{{ .Release.Namespace }}"
+  labels:
+    app: "{{ .Values.appName }}"
+  annotations:
+    kubernetes.io/ingress.class: "{{ .Values.ingressClass }}"
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+  - hosts:
+    - "{{ .Values.certDomainName }}"
+    secretName: "{{ .Values.appName }}"
+  rules:
+  - host: "{{ .Values.certDomainName }}"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: "{{ .Values.appName }}"
+            port:
+              number: {{ .Values.externalPort }}
+
