@@ -1,0 +1,6 @@
+apiVersion: v2
+description: A context aware, born to the cloud, customizable data loss prevention service
+name: presidio
+type: application
+version: 2.0
+appVersion: 2.2.21

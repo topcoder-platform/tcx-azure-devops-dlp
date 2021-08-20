@@ -1,0 +1,11 @@
+appName: presidio
+imageName: mcr.microsoft.com/presidio-analyzer:2.2.21
+appPort: 3000
+nginxPort: 443
+externalPort: 443
+replicaCount: 3
+serviceType: ClusterIP
+ingressClass: nginx
+nginxImageTag: 1.21.1-alpine
+certDomainName: tcx-presidio.svc
+caCommonName: tcx-presidio.ca
