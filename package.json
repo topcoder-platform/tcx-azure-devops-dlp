@@ -10,7 +10,7 @@
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "@hapi/boom": "^9.1.0",
+    "@hapi/boom": "^9.1.4",
     "axios": "^0.21.0",
     "html-to-text": "^6.0.0",
     "lodash": "^4.17.20",
