@@ -14,7 +14,7 @@
     "axios": "^0.21.0",
     "html-to-text": "^6.0.0",
     "lodash": "^4.17.20",
-    "mongoose": "^5.11.4",
+    "mongoose": "^5.13.10",
     "type-fest": "^0.20.2"
   },
   "devDependencies": {
